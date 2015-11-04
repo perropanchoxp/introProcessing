@@ -1,2 +1,6 @@
 # introProcessing
-Seminario de Computación Gráfica
+
+##Diseño Gráfico
+##Universidad de Chile
+###Seminario de Computación
+
