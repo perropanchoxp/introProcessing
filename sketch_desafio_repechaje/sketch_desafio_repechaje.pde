@@ -1,5 +1,5 @@
 Scrollbar graph;
-float x = 1;
+int x = 1;
 
 void setup () {
   fullScreen();
@@ -8,8 +8,7 @@ void setup () {
 }
 void draw () {
   stroke(200,200,255);
-  float barra = map(graph.getPos(), 0, width, 0, height);
-  line(x, height, x, height-barra);
+  line(x, height, x, height-graph.getPos());
   x = x + 1;
   if (x > width) {
     x = 1;

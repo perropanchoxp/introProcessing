@@ -22,8 +22,7 @@ class Scrollbar {
   void update() {
     if (overEvent()) {
       over = true;
-    } 
-    else {
+    } else {
       over = false;
     }
     if (mousePressed && over) {
@@ -47,8 +46,7 @@ class Scrollbar {
   boolean overEvent() {
     if (mouseX > xpos && mouseX < xpos+swidth && mouseY > ypos && mouseY < ypos+sheight) {
       return true;
-    } 
-    else {
+    } else {
       return false;
     }
   }
@@ -57,11 +55,11 @@ class Scrollbar {
     noStroke();
     fill(255);
     rect(xpos, ypos, swidth, sheight);
-    fill(100,100,155);
+    fill(100, 100, 155);
     rect(spos, ypos, sheight, sheight);
   }
 
   int getPos() {
-    return spos;
+    return round(map(spos, 9, width-9, 0, height));
   }
 }
